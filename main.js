@@ -31,13 +31,14 @@ while(tieneEnergia()){
     let golpeGoku = calcularGolpe();
     console.log(`Golpe Goku ${golpeGoku}`);
 
+    document.write(`<h3>Round ${round}</h3></br>`)
 
     if(golpeGoku > golpeSuperman){
         energiaSuperman -= golpeGoku;
-        document.write("<div class='card'><img src='./img/golpe-goku.png'></div>")
+        document.write(`<div class='card'><img src='./img/golpe-goku.png'><p>Goku golpea por ${golpeGoku}</p><p>La vida de Superman queda en ${energiaSuperman}</p></div>`)
     } else {
         energiaGoku -= golpeSuperman;
-        document.write("<div class='card'><img src='./img/golpe-superman.jpg'></div>")
+        document.write(`<div class='card'><img src='./img/golpe-superman.jpg'><p>Superman golpea por ${golpeSuperman}</p><p>La vida de Goku queda en ${energiaGoku}</p></div>`)
 
     }
 
@@ -58,10 +59,10 @@ while(tieneEnergia()){
 
 if(supermanSigueEnPie()){
     console.log("Gano Superman");
-    document.write("<div class='ganador'><img src='./img/superman-win.jpg'></div> ");
+    document.write("<div class='ganador'><img src='./img/superman-win.jpg'><h3>Superman Wins!</h3></div> ");
 } else {
     console.log("Gano Goku");
-    document.write("<div class='ganador'><img src='./img/goku-win.jpg'></div>");
+    document.write("<div class='ganador'><img src='./img/goku-win.jpg'><h3>Goku Wins!</h3></div>");
 
 }
 
